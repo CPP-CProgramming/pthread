@@ -22,16 +22,16 @@ int main() {
 
     if(ret == 0)
     {
-        printf("pthread_create returns %d\n", ret);
+        printf("pthread1_create returns %d\n", ret);
     } else {
-        printf("pthread_create returns error: %d\n", ret);
+        printf("pthread2_create returns error: %d\n", ret);
         exit(1);
     }
     ret = pthread_create(&thread2, NULL, thread_function, (void*)message2);
     if(ret == 0){
-        printf("pthread_create returns %d\n", ret);
+        printf("pthread2_create returns %d\n", ret);
     } else {
-        printf("pthread_error returns error: %d\n", ret);
+        printf("pthread2_error returns error: %d\n", ret);
         exit(1);
     }
 
